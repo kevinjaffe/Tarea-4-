@@ -1,4 +1,4 @@
-@@ -0,0 +1,36 @@
+
 # Tarea 4 — Login con verificación de email usando SignalR
 
 Aplicación ASP.NET Core (Razor Pages) que implementa un login con verificación de email: cuando el usuario "verifica" su correo, la página de login **se redirige automáticamente** a la página principal, sin que el usuario deba volver a ingresar sus credenciales.
