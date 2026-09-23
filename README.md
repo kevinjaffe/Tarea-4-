@@ -22,13 +22,6 @@ Esta redirección automática se logra porque la página de login recibe un **ev
 
 > En la consola aparece el log `Se notificara al cliente con id {id}` cuando la URL de verificación es accedida, confirmando que el servidor envió el evento.
 
-## Cómo está hecho
+## Diagrama de secuencia 
 
-| Archivo | Rol |
-|---|---|
-| `Program.cs` | Registra `AddSignalR()`, mapea el Hub en `/login` y expone el endpoint `/verificar/usuario/{id}` que envía el evento `VerificacionOk` al cliente puntual (`hubContext.Clients.Client(id).SendAsync(...)`). |
-| `Hubs/LoginConVerificacionHub.cs` | Define el método `Login(email, pass)` que el cliente invoca. Aquí se simula el "envío del mail" dejando la URL de verificación en el log. `Context.ConnectionId` identifica a cada cliente conectado. |
-| `Model/Usuario.cs` | Modelo simple con `EsUsuarioValido()` y `NecesitarVerificacion()` (con TODOs para implementar lógica real). |
-| `Pages/LoginConVerificacion.cshtml` | Página principal (`@page "/"`). Del lado del cliente conecta SignalR con `withUrl("/login")`, escucha el evento con `connection.on("VerificacionOk", ...)` y se redirige con `window.location.href`. |
-| `Pages/PaginaBienvenida.cshtml` | Página a la que se redirige la persona luego de verificar. |
-| `wwwroot/lib/microsoft/signalr/` | Librería de SignalR del lado del cliente (bajada con LibMan). |
+<img width="1411" height="656" alt="image" src="https://github.com/user-attachments/assets/b85d3ccb-908a-4029-9cfe-a60aaafb3080" />
