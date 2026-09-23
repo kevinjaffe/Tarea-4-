@@ -8,7 +8,7 @@ Esta redirección automática se logra porque la página de login recibe un **ev
 ## Flujo de la solución
 
 
-**En palabras sencillas:** el navegador le avisa al servidor que alguien quiere loguearse, y el servidor le avisa a *ese mismo navegador* (y solo a él) cuando el email fue verificado. Al recibir el aviso, la página se redirige sola.
+ el navegador le avisa al servidor que alguien quiere loguearse, y el servidor le avisa a *ese mismo navegador* (y solo a él) cuando el email fue verificado. Al recibir el aviso, la página se redirige sola.
 
 ## Cómo ejecutarlo
 
